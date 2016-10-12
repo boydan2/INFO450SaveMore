@@ -11,7 +11,7 @@ class BankAccount
 protected:
 	char accountNumber[10];
 	double interestRate;
-	char ISBN[50];
+	double balance;
 	double price;
 public:
 	BankAccount()
@@ -28,8 +28,8 @@ class Book : public BankAccount
 public:
 	void display()
 	{
-		printf(" account number: %s\n interest rate: %s\n ISBN: %s\n Price: %3.2f\n pages: %d\n",
-			accountNumber, interestRate, ISBN, price, numPages);
+		printf(" account number: %s\n interest rate: %3.2f\n balance: %3.2f\n price: %3.2f\n pages: %i\n",
+			accountNumber, interestRate, balance, price, numPages);
 	}
 	void get_info()
 	{
@@ -37,8 +37,8 @@ public:
 		gets_s(accountNumber);
 		cout << "enter interest rate: ";
 		cin >> interestRate;
-		cout << "enter ISBN: ";
-		gets_s(ISBN);
+		cout << "enter balance: ";
+		cin >> balance;
 		cout << "enter Price: ";
 		cin >> price;
 		cout << "enter pages: ";
@@ -54,8 +54,8 @@ class Audio : public BankAccount
 public:
 	void display()
 	{
-		printf(" account number: %s\n interest rate: %s\n ISBN: %s\n Price: %3.2f\n minutes: %d\n",
-			accountNumber, interestRate, ISBN, price, minutes);
+		printf(" account number: %s\n interest rate: %3.2f\n balance: %3.2f\n Price: %3.2f\n minutes: %d\n",
+			accountNumber, interestRate, balance, price, minutes);
 	}
 	void get_info()
 	{
@@ -63,8 +63,8 @@ public:
 		gets_s(accountNumber);
 		cout << "enter interest rate: ";
 		cin >> interestRate;
-		cout << "enter ISBN: ";
-		gets_s(ISBN);
+		cout << "enter balance: ";
+		cin >> balance;
 		cout << "enter Price: ";
 		cin >> price;
 		cout << "enter minutes: ";
